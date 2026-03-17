@@ -42,17 +42,6 @@ Our verification process is not a "novelty service." It is a standardized protoc
 III. Recognition of Authority
 By utilizing this portal, users acknowledge that they are entering into a Sovereign Record of Fact. The Bureau reserves all rights to the "Social Clerk" methodology and the "Digital_Kinship-Office" repository structure.
 
-
-
-
-
-
-
-
-
-
-
-
 RE-DKO-2026: Repository Description & Technical Profile
 Division: Digital_Kinship-Office (DKO)
 
@@ -100,3 +89,42 @@ The DKO Repository Seal
 Every technical document or digital folder for this repository should be marked with:
 
 "PROPERTY OF SOLOMON KIN RECORDS | DIVISION: DKO | AUTHORIZED ENTRIES ONLY"
+
+SOLOMON KIN, LLC. | INTELLECTUAL PROPERTY INVENTORY
+Repository: DIGITAL_KINSHIP-OFFICE (DKO)
+
+Project Code: VOWVAULT-2026
+
+Status: PROPRIETARY / CONFIDENTIAL
+
+Asset Name,Legal Classification,Description
+Social Clerk,Trademark / Service Mark,The primary bureaucratic persona and service provider.
+Office of Serious Relationships,Trademark / Service Mark,The specific division of certification and verification.
+Digital_Kinship-Office,Trade Name,The sovereign repository and technical division.
+VowVault,Trademark / Digital Asset,The consumer-facing marketplace for relationship products.
+Kin Pages Directory,Trademark / Database,The public/private searchable registry of verified unions.
+Solomon Kin Records,Parent Intellectual Property,The umbrella repository for all high-fidelity digital records.
+
+Asset Name,IP Classification,Technical Logic
+GKID Protocol,Patent-Pending / Trade Secret,The 16-digit alphanumeric hashing system for dual-identity pairing.
+Dual-Key Verification,Proprietary Workflow,The specific sequence of multi-party biometric/digital signatures.
+Bond Serial Logic,Proprietary Workflow,"The non-sequential, tamper-evident numbering of Bureau Records."
+Living Record Interface,UI/UX Trade Secret,The real-time population of document data during application.
+Annual Re-Affirmation,Business Method,"The automated 12-month audit loop to maintain ""Active"" status."
+
+Bureau Code,Classification Title,IP Content
+PB-01,Primary Bond,Foundational Oath & Standard of Commitment clauses.
+TMW-02,Traditional Union Ledger,Traditionalist Man-to-Woman verification language.
+GNK-03,Gender-Neutral Kinship,Sovereignty-of-Identity and Pronoun-specific clauses.
+DCHC-05,Domestic Co-Habitation,Resource-alignment and Shared-household legalistic text.
+LU-50,Silver Era Legacy,Late-life companionship and estate-alignment verbiage.
+CRCD-11,Conflict Resolution Deed,Communication-protocol and dispute-resolution logic.
+
+Asset Name,Classification,Content Description
+The Preamble,Copyrighted Text,The high-authority opening statement of the DKO Bureau.
+The Foundational Oath,Copyrighted Text,The dual-signature covenant text for primary partners.
+Declaration of Intent,Copyrighted Text,The central legalistic wording of Bureau Form: DKO-DSI-2026.
+Currency-Grade Design,Visual Copyright,"The guilloché patterns, microprinting, and Lion & Key Seal."
+The Bureau Manifesto,Copyrighted Text,The philosophical and operational guide for the DKO launch.
+
+"Copyright © 2026 Solomon Kin, LLC. All Rights Reserved. GKID Protocol and Social Clerk Nomenclatures are protected under SK-IP-2026-001. Unauthorized use of the Bureau Repository logic is strictly prohibited."
