@@ -1,0 +1,58 @@
+// src/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// THE USER IDENTITY NODE
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  fullName      String
+  biometricHash String?   // Encrypted hash of identity verification
+  createdAt     DateTime  @default(now())
+  
+  // Relationships
+  initiatedBonds Bond[]   @relation("Initiator")
+  affirmedBonds  Bond[]   @relation("Affirmer")
+}
+
+// THE BOND OF RECORD (DKO-LEAD-2026)
+model Bond {
+  id            String    @id @default(cuid())
+  gkid          String    @unique // The 16-digit Public Identifier
+  bondType      String    // e.g., "PB-01", "LU-50"
+  status        BondStatus @default(PENDING)
+  
+  // The Two Identities
+  initiatorId   String
+  initiator     User      @relation("Initiator", fields: [initiatorId], references: [id])
+  
+  affirmerId    String
+  affirmer      User      @relation("Affirmer", fields: [affirmerId], references: [id])
+
+  // Content & Oath
+  foundationalOath Text
+  issuedAt         DateTime?
+  expiresAt        DateTime? // For Annual Re-Affirmation tracking
+  
+  // Security Metadata
+  signatureHash    String   // Cryptographic proof of dual-consent
+  isPrivate        Boolean  @default(false)
+  
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+enum BondStatus {
+  PENDING    // Waiting for Partner B to sign
+  ACTIVE     // Fully Inked & Verified
+  DISSOLVED  // Formal Dissolution (Protocol D-99)
+  EXPIRED    // Failed Annual Re-Affirmation
+  VOID       // Cancelled by Bureau
+}
