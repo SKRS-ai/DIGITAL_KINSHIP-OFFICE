@@ -55,4 +55,21 @@ enum BondStatus {
   DISSOLVED  // Formal Dissolution (Protocol D-99)
   EXPIRED    // Failed Annual Re-Affirmation
   VOID       // Cancelled by Bureau
+}// src/lib/protocol/generateGKID.ts
+import crypto from 'crypto';
+
+export function generateGKID(userA: string, userB: string, date: Date): string {
+  // 1. Create a unique salt using the Bureau Secret
+  const secret = process.env.BUREAU_PROTOCOL_SECRET;
+  
+  // 2. Hash the combined identities
+  const hash = crypto
+    .createHmac('sha256', secret!)
+    .update(`${userA}-${userB}-${date.getTime()}`)
+    .digest('hex')
+    .toUpperCase();
+
+  // 3. Format into the 16-digit Bureau Standard (XXXX-XXXX-XXXX-XXXX)
+  const segments = hash.match(/.{1,4}/g);
+  return segments ? segments.slice(0, 4).join('-') : "ERROR-PROT-VOID";
 }
